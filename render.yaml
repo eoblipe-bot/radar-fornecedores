@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: radar-fornecedores
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node radar.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ML_ACCESS_TOKEN
+        sync: false
+      - key: ML_REFRESH_TOKEN
+        sync: false
